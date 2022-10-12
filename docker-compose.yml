@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  test: 
+    container_name: workship_docker_compose_test
+    image: node:18-alpine3.15
+    command: npm run start:debug
+    build:
+      context: .
+      target: development
+      dockerfile: ./Dockerfile
+    ports:
+      - 8030:8030
+    volumes:
+      - .:/usr/src/app
