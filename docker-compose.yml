@@ -17,4 +17,6 @@ services:
   elastic:
     container_name: elastic_search
     image: elasticsearch:latest
+    ports:
+      - 9201:9200
       
