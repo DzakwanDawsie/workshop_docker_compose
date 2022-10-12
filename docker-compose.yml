@@ -16,7 +16,7 @@ services:
 
   elastic:
     container_name: elastic_search
-    image: elasticsearch:latest
+    image: elasticsearch:8.4.3
     ports:
       - 9201:9200
       
