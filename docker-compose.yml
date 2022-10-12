@@ -5,6 +5,10 @@ services:
         container_name: workshop_docker_compose_dev
         image: node:18-alpine3.15
         command: npm run start:debug
+        build:
+            context: .
+            target: development
+            dockerfile: ./Dockerfile
         ports:
             - 8030:8030
         volumes:
