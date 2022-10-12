@@ -10,6 +10,11 @@ services:
       target: development
       dockerfile: ./Dockerfile
     ports:
-      - 8030:8030
+      - 81:80
     volumes:
       - .:/usr/src/app
+
+  elastic:
+    container_name: elastic_search
+    image: elasticsearch:latest
+      
